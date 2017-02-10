@@ -28,7 +28,7 @@
     <![endif]-->
   </head>
 
-  <body onload="advPage()">
+  <body>
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -43,7 +43,7 @@
             <li><a href="./analyze.html">Analyze Time</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <a href="#" type="button" class="btn btn-primary navbar-btn track" onclick="advPage()">Track New Activity</a>
+            <button type="button" class="btn btn-primary navbar-btn">Track New Activity</button>
 
             <button type="button" class="btn btn-default navbar-btn">End Current Activity</button>
           </ul>
@@ -51,26 +51,27 @@
       </div>
     </nav>
 
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <span class="pull-right">
+          <a href="./homepage.html" type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+          </a>
+        </span>
+    </div>
     <div class="col-lg-4 container">
       <!-- Main component for a primary marketing message or call to action -->
       <div class="row jumbotron">
-          <form>
-            <div class="form-group">
-              <label for=""></label>
-              <input type="text" class="form-control" id="input" aria-describedby="" placeholder="Enter Activity">
-            </div>
-          </form>
-          <a class="btn btn-lg btn-primary center-block track" role="button" onclick="advPage()">TRACK ACTIVITY</a>
-          <h2><pre class="text-center" style="font-size: 36px">0 : 00</pre></h2>
-          <h2 class="text-center">HR : MIN</h2>
+        <div class="text-center" style="font-size:36px;">Current Activity</div>
+        <div class="panel panel-default">
+          <div class="panel-body text-center" style="font-size:16px;">Working on EECS 330</div>
+        </div>
+        <h2><pre class="text-center" style="font-size: 36px">0 : 00</pre></h2>
+        <h3 class="text-center">HR : MIN</h3>
       </div>
+
+
     </div> <!-- /container -->
-    <div class="col-lg-4">
-      <div class="alert alert-danger">
-        <strong>Warning!</strong> Enter an activity before you start tracking.
-      </div>
-    </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -80,6 +81,5 @@
     <script src="./docs/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="./proto1.js"></script>
   </body>
 </html>
