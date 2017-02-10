@@ -15,7 +15,7 @@
     <link href="./docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="navbar-fixed-top.css" rel="stylesheet">
+    <link href="time_tracker.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="./docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,7 +31,7 @@
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-blue navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Time Tracker</a>
@@ -43,11 +43,9 @@
             <li><a href="./analyze.html">Analyze Time</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a>A Link</a></li>
-            <li><a>Another Link</a></li>
+            <button type="button" class="btn btn-default navbar-btn">Start New Activity</button>
 
-            <li class="active"><a href="#">Fixed top</a></li>
-
+            <button type="button" class="btn btn-default navbar-btn">End Current Activity</button>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
