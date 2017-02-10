@@ -3,23 +3,24 @@ var val = "";
 //Get the form from the html
 var x = document.getElementById("input");
 //Update the value of the form
-x.onkeydown = function() {val = x.value};
+x.onkeypress = function(ev) {keypress(ev)};
 
-//Advance to the Current Activity Page if form is filled, else show warning
-function advPage(){
-  if (val){
-    location.href = "./currActivity.html";
-  }
-  else {
-    $(document).ready(function(){
-      $(".track").click(function(){
-        $(".alert").show();
-      });
-    });
-  }
+function keypress(ev) {
+  val += String.fromCharCode(ev.which);
 }
+var y = document.getElementsByClassName("track");
+
+$(document).ready(function() {
+    $(".track").click(function() {
+      console.log(val);
+        if (val){
+          location.href = "./currActivity.html";
+        }
+        else {
+              $(".alert").show();
+        }
+    });
 //Click on the warning to make it go away
-$(document).ready(function(){
   $(".alert").click(function(){
     $(".alert").hide();
   });
