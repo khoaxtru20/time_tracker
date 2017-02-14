@@ -1,5 +1,25 @@
 //Value in the form
 var val = "";
+
+// if (!sessionStorage.getItem("db")){
+//   console.log("no storage");
+// }
+// else {
+//   console.log("var in storage");
+// }
+//
+var test_display = document.getElementById("test");
+// console.log(saved);
+// sessionStorage.setItem("db", saved);
+//
+// console.log(sessionStorage.getItem("db"));
+
+if (sessionStorage.getItem("db")) {
+  var saved = sessionStorage.getItem("db");
+  test_display.innerHTML = saved;
+}
+
+
 //Get the form from the html
 var x = document.getElementById("input");
 //Update the value of the form
@@ -23,6 +43,7 @@ $(document).ready(function() {
       if (event.which == 13) {
         event.preventDefault();
         if (val){
+          sessionStorage.setItem("db", val);
           location.href = "./currActivity.html";
         }
         else {
