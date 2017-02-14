@@ -37,7 +37,7 @@ html {font-family: helvetica, arial;}
 .htimeline .step .tasks { margin-top: 10px;}
 .htimeline .step .tasks .resource {position: relative; height: 40px;}
 .htimeline .step .tasks .resource::before { position: absolute; bottom: 2px; left: -5px; content: attr(data-name); font-size: 10px; font-style: italic; color: #888}
-.htimeline .step .tasks .task { overflow: hidden; font-size: 30px; padding-left: 10px; border: solid 1px white; border-radius: 4px; min-height: 20px;}
+.htimeline .step .tasks .task { overflow: hidden; font-size: 2vw; padding-left: 10px; border: solid 1px white; border-radius: 4px; min-height: 20px;}
 .htimeline .step.green .tasks .task { background-color: #348F50; color: white; }
 .htimeline .step.orange .tasks .task { background-color: #F09819; color: white; }
 .htimeline .step.red .tasks .task { background-color: #C04848; color: white; }
