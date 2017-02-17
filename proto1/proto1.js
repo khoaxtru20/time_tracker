@@ -1,7 +1,7 @@
 //Value in the form
 var val = "";
 
-
+//Only do this on the page with this element.
 if(document.getElementById("test")){
 
   var test_display = document.getElementById("test");
@@ -12,7 +12,7 @@ if(document.getElementById("test")){
   }
 }
 
-
+//Only do this on the pages with this element.
 if(document.getElementById("input")){
   //Get the form from the html
   var x = document.getElementById("input");
@@ -20,16 +20,22 @@ if(document.getElementById("input")){
   x.onkeydown = function(ev) {keydown(ev)};
 }
 
+//**NOTE: breaks on symbols that are only accessible with a key + shift e.g. exclamation point
 function keydown(ev) {
+  //If backspace is pressed, delete the last element in string
   if (ev.which == 8) {
     val = val.substring(0, val.length-1);
   }
   else {
+    //As long as shift and enter keys aren't pressed initially:
     if(ev.which != 13 && ev.which != 16){
+      //And the keys are a-z
       if (!ev.shiftKey && ev.which >= 65 && ev.which <= 90){
+        //Print lowercase (since default is capital for the onkeydown event)
         val += String.fromCharCode(ev.which+32);
       }
       else{
+        //Print everything else
         val += String.fromCharCode(ev.which);
       }
     }
