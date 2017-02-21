@@ -30,14 +30,6 @@ if(document.getElementById("input")){
   x.onkeydown = function(ev) {keydown(ev)};
 }
 
-//Only do this on the pages with this element (index.html)
-if(document.getElementById("input0")){
-  //Get the form from the html
-  var x = document.getElementById("input0");
-  //Update the value of the form
-  x.onkeydown = function(ev) {keydown(ev)};
-}
-
 //**NOTE: breaks on symbols that are only accessible with a key + shift e.g. exclamation point
 function keydown(ev) {
   //If backspace is pressed, delete the last element in string
@@ -58,7 +50,7 @@ function keydown(ev) {
       }
     }
   }
-  console.log(val);
+  // console.log(val);
 }
 
 $(document).ready(function() {

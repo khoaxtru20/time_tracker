@@ -1,3 +1,10 @@
 #todo{
 margin-top: 21px;
 }
+.checkbox{
+  display:none;
+}
+
+.td{
+  display:none;
+}

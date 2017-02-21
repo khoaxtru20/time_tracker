@@ -40,7 +40,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="./index.html">Home</a></li>
-            <li class="active"><a href="#">To-Do</a></li>
+            <li class="active"><a href="./todo.html">To-Do</a></li>
             <li><a href="./analyze.html">Analyze Time</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -55,40 +55,40 @@
 
       <div class="col-lg-4 col-sm-offset-4 container">
       <!-- Main component for a primary marketing message or call to action -->
-        <div class="row jumbotron">
-          <!-- <form> -->
+        <div class="row jumbotron" id=todo>
+          <form>
             <div class="form-group">
               <h1> TO-DO LIST </h1>
-              <label for=""></label>
 
-              <label class="checkbox">
-                 <input type="checkbox" name="keywords" value="__option__">
+              <label class="checkbox cb0">
+                 <input type="checkbox" value="__option__">
               </label>
-              <p type="text" id="input0" aria-describedby=""></p>
+              <!-- <a type="text" id="input0" aria-describedby=""></a> -->
+              <a href="./currActivity.html" class="" id="input0" role="button"></a>
 <br>
-              <label class="checkbox">
+              <label class="checkbox cb1">
                 <input type="checkbox" name="keywords" value="__option__">
               </label>
-              <p type="text" id="input1" aria-describedby=""></p>
+              <a class="" id="input1" role="button"></a>
 <br>
-              <label class="checkbox">
+              <label class="checkbox cb2">
                 <input type="checkbox" name="keywords" value="__option__">
               </label>
-              <p type="text" id="input2" aria-describedby=""></p>
+              <a class="" id="input2" role="button"></a>
 <br>
-              <label class="checkbox">
+              <label class="checkbox cb3">
                 <input type="checkbox" name="keywords" value="__option__">
               </label>
-              <p type="text" id="input3" aria-describedby=""></p>
+            <a class="" id="input3" role="button"></a>
 <br>
-              <label class="checkbox">
+              <label class="checkbox cb4">
                 <input type="checkbox" name="keywords" value="__option__">
               </label>
-              <p type="text" id="input4" aria-describedby=""></p>
+              <a class="" id="input4" role="button"></a>
 <br>
             </div>
-          <!-- </form> -->
-          <a class="btn btn-lg btn-primary center-block track" role="button">ADD TASK(S)</a>
+          </form>
+          <!-- <a class="btn btn-lg btn-primary center-block track" role="button">TRACK</a> -->
         </div>
       </div>
 
@@ -103,5 +103,6 @@
     <script src="./docs/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./todo.js"></script>
   </body>
 </html>
