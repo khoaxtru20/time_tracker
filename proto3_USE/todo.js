@@ -36,6 +36,7 @@ function updateStorage(ev) {
   // var x = ev.target;
   // sessionStorage.setItem("db", x.innerHTML);
 }
+//To show the to-do elements when pressing "+"
 k=0;
 function show() {
   $(document).ready(function () {
