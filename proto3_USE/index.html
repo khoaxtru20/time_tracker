@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>TimeTracker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./docs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="time_tracker.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="./docs/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- <script src="./docs/assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Time Tracker</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="./todo.html">To-Do</a></li>
+            <li><a href="./analyze.html">Analyze Time</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <button type="button" class="btn btn-primary navbar-btn track">Track New Activity</button>
+            <button type="button" class="btn btn-default navbar-btn">Stop Tracking</button> -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class='container-fluid timeline' style="visibility:hidden;">
+      <ul class='htimeline'>
+        <li data-date='Feb. 10, 2017' class='step col-sm-12 orange'>
+          <!-- <div>Inserted</div> -->
+          <div class='tasks container-fluid'>
+              <div class='task col-sm-3'>Working on EECS 330</div>
+          </div>
+        </li>
+    </div>
+
+
+    <div class="col-lg-4 col-sm-offset-4 container">
+    <!-- Main component for a primary marketing message or call to action -->
+      <div class="row jumbotron">
+        <a class="btn btn-lg btn-primary center-block" role="button" href="./todo_listed.html">Choose from TO-DO</a>
+        <h2 class="text-center">-OR-</h2>
+        <form>
+          <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" id="input" aria-describedby="" placeholder="Enter Activity">
+          </div>
+        </form>
+        <h2><pre class="text-center" style="font-size: 36px">0 : 00</pre></h2>
+        <h2 class="text-center">HR : MIN</h2>
+        <br>
+        <a class="btn btn-lg btn-primary center-block track" role="button">TRACK ACTIVITY</a>
+      </div>
+    </div> <!-- /container -->
+
+    <div class="col-sm-4">
+      <div class="alert alert-danger">
+        <strong>Warning!</strong> Enter an activity before you start tracking.
+      </div>
+    </div>
+
+    <!-- <div id="test">
+      no data in sessionStorage
+    </div> -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./docs/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./proto1.js"></script>
+  </body>
+</html>

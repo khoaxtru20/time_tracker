@@ -1,0 +1,9 @@
+#pieChart{
+	float: left;
+	margin-top: 100px;
+}
+
+#barGraph{
+	float: right;
+	margin-top: 110px;
+}
