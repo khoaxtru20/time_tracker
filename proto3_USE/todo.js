@@ -27,11 +27,11 @@ if(document.getElementById("input"+i)){
   for(; saved && i < saved.length; i++){
     var id = document.getElementById("input"+i);
     id.innerHTML = saved[i];
-
-    $(".cb"+i).show();
-    $("input"+i).show();
-  }
+      $("#cb"+i).show();
+      $("#input"+i).show();
+    }
 }
+//to update value on CurrentActivity Page
 function updateStorage(ev) {
   // var x = ev.target;
   // sessionStorage.setItem("db", x.innerHTML);
@@ -40,8 +40,32 @@ function updateStorage(ev) {
 k=0;
 function show() {
   $(document).ready(function () {
-    str = "#task";
+    var str = "#task";
     $(str+k).show();
     k++;
-});
+  });
 }
+
+//Remove items from to-do list on check
+checkboxes = [];
+for (var j = 0; j < 5; j++) {
+  checkboxes[j]="ch"+ j;
+}
+document.onclick = (function(e){
+  targID = e.target.id;
+  if (checkboxes.includes(targID) && document.getElementById(targID).checked){
+    // $("#"+targID).hide();
+    // $("#input"+targID.slice(-1)).hide();
+    $("#"+targID).fadeOut('medium', function() {
+      $(this).css({"visibility":"hidden"});
+      $(this).css({"display":"block"});
+    });
+
+    $('#input'+targID.slice(-1)).fadeOut('medium', function() {
+      $(this).css({"visibility":"hidden"});
+      $(this).css({"display":"block"});
+    });
+    console.log(e.target);
+  }
+
+});
