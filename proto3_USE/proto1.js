@@ -22,6 +22,8 @@ if(document.getElementById("timeline")){
   }
 }
 
+
+
 //Only do this on the pages with this element (index.html)
 if(document.getElementById("input")){
   //Get the form from the html
