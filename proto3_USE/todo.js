@@ -48,24 +48,36 @@ function show() {
 
 //Remove items from to-do list on check
 checkboxes = [];
+taskboxes = [];
 for (var j = 0; j < 5; j++) {
   checkboxes[j]="ch"+ j;
+  taskboxes[j]="input"+ j;
 }
 document.onclick = (function(e){
   targID = e.target.id;
   if (checkboxes.includes(targID) && document.getElementById(targID).checked){
     // $("#"+targID).hide();
     // $("#input"+targID.slice(-1)).hide();
-    $("#"+targID).fadeOut('medium', function() {
-      $(this).css({"visibility":"hidden"});
-      $(this).css({"display":"block"});
+    // $("#"+targID).fadeOut('medium', function() {
+    //   $(this).css({"visibility":"hidden"});
+    //   $(this).css({"display":"block"});
+    // });
+    // $('#input'+targID.slice(-1)).fadeOut('medium', function() {
+    //   $(this).css({"visibility":"hidden"});
+    //   $(this).css({"display":"block"});
+    // });
+    $(function() {
+      $("#"+targID).css("visibility", "hidden");
+      $("#"+targID).css({"display":"block"});
+      $('#input'+targID.slice(-1)).css("visibility", "hidden");
+      $('#input'+targID.slice(-1)).css({"display":"block"});
     });
-
-    $('#input'+targID.slice(-1)).fadeOut('medium', function() {
-      $(this).css({"visibility":"hidden"});
-      $(this).css({"display":"block"});
-    });
-    console.log(e.target);
+  }
+  if (taskboxes.includes(targID)){
+    saveTask = document.getElementById(targID).innerHTML; console.log(saveTask); console.log(targID);
+    sessionStorage.setItem("db", saveTask);
+    location.href="./currActivity.html";
+    document.getElementById("currAct").innerHTML = sessionStorage.getItem("db");
   }
 
 });
