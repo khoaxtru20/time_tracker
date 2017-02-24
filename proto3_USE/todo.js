@@ -19,9 +19,6 @@ document.onkeypress = (function (e) {
   }
 });
 
-function updateStorage() {
-  // sessionStorage.setItem("db", JSON.stringify(list));
-}
 
 //Only do this on the page with this element (todo_listed.html)
 i=0;
@@ -29,9 +26,21 @@ if(document.getElementById("input"+i)){
   var saved = JSON.parse(sessionStorage.getItem("list"));
   for(; saved && i < saved.length; i++){
     var id = document.getElementById("input"+i);
-
     id.innerHTML = saved[i];
+
     $(".cb"+i).show();
     $("input"+i).show();
   }
+}
+function updateStorage(ev) {
+  // var x = ev.target;
+  // sessionStorage.setItem("db", x.innerHTML);
+}
+k=0;
+function show() {
+  $(document).ready(function () {
+    str = "#task";
+    $(str+k).show();
+    k++;
+});
 }
