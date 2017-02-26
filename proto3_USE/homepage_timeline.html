@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>TimeTracker</title>
+    <title>TRACK IT!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="gDate()">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -53,7 +53,7 @@
 
     <div class='container-fluid timeline'>
       <ul class='htimeline'>
-        <li data-date='Feb. 24, 2017' class='step col-sm-12 blue'>
+        <li data-date="" class='step col-sm-12 blue' id="date">
           <!-- <div>Inserted</div> -->
           <div class='tasks container-fluid'>
               <div class='task col-sm-3' id="timeline">Untitled</div>

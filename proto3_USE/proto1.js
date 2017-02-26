@@ -84,3 +84,13 @@ $(document).ready(function() {
     $(".alert").hide();
   });
 });
+
+//Set Date on TimeLine
+function gDate() {
+  var d = new Date();
+  var dateEl = document.getElementById('date');
+  // 'Setting' data-attributes using setAttribute
+  dateEl.setAttribute('data-date',d.toDateString());
+  console.log(d);
+  return;
+}
