@@ -28,7 +28,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="stopWatch()">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -39,7 +39,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./todo.html">To-Do</a></li>
+            <li><a href="./todo_listed.html">To-Do</a></li>
             <li><a href="./analyze.html">Analyze Time</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -71,11 +71,11 @@
     <div class="col-sm-4 container">
       <!-- Main component for a primary marketing message or call to action -->
       <div class="row jumbotron">
-        <div class="text-center" style="font-size:30px; margin-top: -17px;">Current Activity</div>
+        <h1 class="text-center" style="font-size:30px; margin-top: -17px;">CURRENT ACTIVITY</h1>
         <div class="panel panel-default">
           <div class="panel-body text-center" style="font-size:16px;" id="currAct">Nothing yet!</div>
         </div>
-        <h2><pre class="text-center" style="font-size: 36px">00 : 00 : 00<p style="margin-left:0px">H       M       S</p></pre></h2>
+        <h2><pre class="text-center" id="countUp" style="font-size: 36px">00 : 00 : 00<p>H       M       S</p></pre></h2>
         <!-- <h3 class="text-center">HR  :  MIN  :  SEC</h3> -->
         <a href="./homepage_timeline.html" class="btn btn-lg btn-default center-block track" role="button">Stop Tracking</a>
       </div>
@@ -94,5 +94,6 @@
     <script src="./docs/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="./proto1.js"></script>
     <script src="./todo.js"></script>
+    <script src="./stopwatch.js"></script>
   </body>
 </html>

@@ -15,8 +15,10 @@ function submit() {
 }
 document.onkeypress = (function (e) {
   if (e.which == 13){
+    e.preventDefault();
     submit();
   }
+
 });
 
 
@@ -31,11 +33,7 @@ if(document.getElementById("input"+i)){
       $("#input"+i).show();
     }
 }
-//to update value on CurrentActivity Page
-function updateStorage(ev) {
-  // var x = ev.target;
-  // sessionStorage.setItem("db", x.innerHTML);
-}
+
 //To show the to-do elements when pressing "+"
 k=0;
 function show() {
