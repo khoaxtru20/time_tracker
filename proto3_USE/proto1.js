@@ -8,8 +8,14 @@ function track() {
       main.push(e.value);
     }
   });
-  sessionStorage.setItem("db", JSON.stringify(main));
-  location.href = "./currActivity.html";
+
+  if (JSON.stringify(main) != "[]"){
+    sessionStorage.setItem("db", JSON.stringify(main));
+    location.href = "./currActivity.html";
+  }
+  else {
+    $(".alert").show();
+  }
 
 }
 document.onkeypress = (function (e) {
@@ -17,8 +23,15 @@ document.onkeypress = (function (e) {
     e.preventDefault();
     track();
   }
-
 });
+
+document.onclick = (function (e) {
+  
+  if (document.getElementsByClassName("alert")){
+    $(".alert").hide();
+  }
+});
+
 //Set storage value to element;
 function setStorage(id){
 
