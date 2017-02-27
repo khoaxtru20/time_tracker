@@ -72,10 +72,9 @@ document.onclick = (function(e){
     });
   }
   if (taskboxes.includes(targID)){
-    saveTask = document.getElementById(targID).innerHTML; console.log(saveTask); console.log(targID);
+    saveTask = JSON.stringify(document.getElementById(targID).innerHTML);
     sessionStorage.setItem("db", saveTask);
     location.href="./currActivity.html";
-    document.getElementById("currAct").innerHTML = sessionStorage.getItem("db");
   }
 
 });

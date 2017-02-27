@@ -28,7 +28,7 @@ function setStorage(id){
 
     if (sessionStorage.getItem("db")) {
       var saved = JSON.parse(sessionStorage.getItem("db"));
-      setEl.innerHTML = saved[0];
+      setEl.innerHTML = saved;
     }
   }
 }
