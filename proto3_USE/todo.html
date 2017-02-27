@@ -70,24 +70,41 @@
         </span>
     </div>
 
-    <div class="col-lg-4 container">
+    <div class="col-sm-4 container">
     <!-- Main component for a primary marketing message or call to action -->
       <div class="row jumbotron">
         <form>
-          <div class="form-group">
+          <div class="row form-group">
             <h1 style="font-size:45px"> TO-DO LIST </h1>
-            <input type="text" name="spot 1" class="form-control" id=taskShow aria-describedby="" placeholder="Enter Task">
-            <input type="text" name="spot 2" class="form-control task" id="task0" aria-describedby="" placeholder="Enter Task">
-            <input type="text" name="spot 3" class="form-control task" id="task1" aria-describedby="" placeholder="Enter Task">
-            <input type="text" name="spot 4" class="form-control task" id="task2" aria-describedby="" placeholder="Enter Task">
-            <input type="text" name="spot 5" class="form-control task" id="task3" aria-describedby="" placeholder="Enter Task">
+            <div class="col-sm-11">
+              <input type="text" name="spot 1" class="form-control" id=taskShow aria-describedby="" placeholder="Enter Task">
+            </div>
+            <a class="btn btn-sm btn-primary center-block col-sm-1 " id="plus-1" onclick="show()"  role="button">&plus;</a>
+
+            <div class="col-sm-11">
+              <input type="text" name="spot 2" class="form-control task" id="task0" aria-describedby="" placeholder="Enter Task">
+            </div>
+            <a class="btn btn-sm btn-primary center-block col-sm-1 task" id="plus0" onclick="show()"  role="button">&plus;</a>
+
+            <div class="col-sm-11">
+              <input type="text" name="spot 3" class="form-control task" id="task1" aria-describedby="" placeholder="Enter Task">
+            </div>
+            <a class="btn btn-sm btn-primary center-block col-sm-1 task" id="plus1" onclick="show()"  role="button">&plus;</a>
+
+            <div class="col-sm-11">
+              <input type="text" name="spot 4" class="form-control task" id="task2" aria-describedby="" placeholder="Enter Task">
+            </div>
+            <a class="btn btn-sm btn-primary center-block col-sm-1 task" id="plus2" onclick="show()"  role="button">&plus;</a>
+
+            <div class="col-sm-11">
+              <input type="text" name="spot 5" class="form-control task" id="task3" aria-describedby="" placeholder="Enter Task">
+            </div>
+            <!-- <a class="btn btn-sm btn-primary center-block col-sm-1 task" id="plus3" onclick="show()"  role="button">&plus;</a> -->
+            <a class="btn btn-lg btn-primary center-block col-sm-12" onclick="submit()"  role="button">SAVE</a>
+
           </div>
           <!-- <input name="bar" value="enter some shit" /> -->
-
         </form>
-        <a class="btn btn-lg btn-primary center-block" onclick="show()"  role="button">&plus;</a>
-        <br>
-        <a class="btn btn-lg btn-primary center-block" onclick="submit()"  role="button">SAVE</a>
       </div>
     </div>
 

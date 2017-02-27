@@ -6,9 +6,9 @@ body {
 .alert {
   display: none;
 }
-.alert:hover {
+/*.alert:hover {
   cursor:pointer
-}
+}*/
 
 h1{
 	margin-top:-5px;

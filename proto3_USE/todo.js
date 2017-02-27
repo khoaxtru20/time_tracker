@@ -39,8 +39,13 @@ k=0;
 function show() {
   $(document).ready(function () {
     var str = "#task";
-    $(str+k).show();
-    k++;
+    var strP = "#plus";
+    if (str+k) {
+      $(str+k).show();
+      $(strP+k).show();
+      $(strP+(k-1)).hide();
+      k++;
+    }
   });
 }
 
@@ -53,7 +58,7 @@ for (var j = 0; j < 5; j++) {
 }
 document.onclick = (function(e){
   targID = e.target.id;
-  if (checkboxes.includes(targID) && document.getElementById(targID).checked){
+  if (checkboxes.includes(targID)){
     // $("#"+targID).hide();
     // $("#input"+targID.slice(-1)).hide();
     // $("#"+targID).fadeOut('medium', function() {

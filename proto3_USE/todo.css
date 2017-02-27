@@ -8,9 +8,13 @@
 }
 
 .task{
-  margin-bottom:10px;
+  margin-bottom:18px;
   display:none;
 }
 #taskShow{
-  margin-bottom:10px;
+  margin-bottom:18px;
+}
+
+.close {
+  font-size:40px;
 }

@@ -25,12 +25,12 @@ document.onkeypress = (function (e) {
   }
 });
 
-document.onclick = (function (e) {
-  
-  if (document.getElementsByClassName("alert")){
-    $(".alert").hide();
-  }
-});
+// document.onclick = (function (e) {
+//
+//   if (document.getElementsByClassName("alert")){
+//     $(".alert").hide();
+//   }
+// });
 
 //Set storage value to element;
 function setStorage(id){
