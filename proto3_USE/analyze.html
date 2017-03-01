@@ -26,6 +26,56 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <!-- These next 4 lines load the Google Charts Libraries -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string','Activity');
+        data.addColumn('number','Hours Per Day');
+        data.addColumn({type: 'string', role: 'tooltip'});
+        data.addColumn({type: 'string', role: 'style'})
+        data.addRows([
+          ['Work', 8, "8 Hours", '#3366CC'],
+          ['Eat',   4, "4 Hours", '#DC3912'],
+          ['Commute', 2, "2 Hours", '#FF9900'],
+          ['Working Out', 1.5, "1.5 Hours", '#109618'],
+          ['Sleep', 8, "8 Hours", '#990099'],
+          ['Other', 0.5, "0.5 Hours", '#0099C6']
+        ]);
+        var options1 = {
+          fontSize: 14,
+          width: 800,
+          height: 600,
+          title: 'My Daily Activities',
+          pieSliceText: 'percentage',
+          legend: {position: 'bottom'}
+        };
+
+        var options2 = {
+          fontSize: 14,
+          width: 800,
+          height: 600,
+          title: 'My Daily Activities',
+          legend: 'none',
+          hAxis: {
+            title: 'Activities'
+          },
+          vAxis: {
+            title: 'Hours'
+          }
+        };
+
+        var chart1 = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart1.draw(data, options1);
+
+        var chart2 = new google.visualization.ColumnChart(document.getElementById('bar_graph'));
+        chart2.draw(data, options2);
+      }
+    </script>
   </head>
 
   <body>
@@ -50,14 +100,12 @@
       </div>
     </nav>
 
-    <div class="container">
-
-        <img id="pieChart" src="./graphs/pieChart.png" alt="Pie Chart" style="width:50%;height:50%;">
-        <img id="barGraph" src="./graphs/barGraph.png" alt="Bar Graph" style="width:50%;height:50%;">
-
-    </div> <!-- /container -->
-
-
+    <table class="columns">
+      <tr>
+        <td style="padding-left:100px"><div id="piechart_3d"></div></td>
+        <td style="padding-left:100px"><div id="bar_graph"></div></td>
+      </tr>
+    </table>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
