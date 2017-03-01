@@ -27,55 +27,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
      <!-- These next 4 lines load the Google Charts Libraries -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string','Activity');
-        data.addColumn('number','Hours Per Day');
-        data.addColumn({type: 'string', role: 'tooltip'});
-        data.addColumn({type: 'string', role: 'style'})
-        data.addRows([
-          ['Work', 8, "8 Hours", '#3366CC'],
-          ['Eat',   4, "4 Hours", '#DC3912'],
-          ['Commute', 2, "2 Hours", '#FF9900'],
-          ['Working Out', 1.5, "1.5 Hours", '#109618'],
-          ['Sleep', 8, "8 Hours", '#990099'],
-          ['Other', 0.5, "0.5 Hours", '#0099C6']
-        ]);
-        var options1 = {
-          fontSize: 14,
-          width: 800,
-          height: 600,
-          title: 'My Daily Activities',
-          pieSliceText: 'percentage',
-          legend: {position: 'bottom'}
-        };
-
-        var options2 = {
-          fontSize: 14,
-          width: 800,
-          height: 600,
-          title: 'My Daily Activities',
-          legend: 'none',
-          hAxis: {
-            title: 'Activities'
-          },
-          vAxis: {
-            title: 'Hours'
-          }
-        };
-
-        var chart1 = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart1.draw(data, options1);
-
-        var chart2 = new google.visualization.ColumnChart(document.getElementById('bar_graph'));
-        chart2.draw(data, options2);
-      }
-    </script>
   </head>
 
   <body>
@@ -100,12 +51,14 @@
       </div>
     </nav>
 
-    <table class="columns">
-      <tr>
-        <td style="padding-left:100px"><div id="piechart_3d"></div></td>
-        <td style="padding-left:100px"><div id="bar_graph"></div></td>
-      </tr>
-    </table>
+    <div class="clearfix"></div>
+    <h1 class="center-text" style="margin-top:50px;">Daily Activities</h1>
+    <div class="col-md-6">
+      <div id="chart_div1" class="chart"></div>
+    </div>
+    <div class="col-md-6">
+      <div id="chart_div2" class="chart"></div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -114,5 +67,72 @@
     <script src="./docs/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+          data.addColumn('string','Activity');
+          data.addColumn('number','Hours Per Day');
+          data.addColumn({type: 'string', role: 'tooltip'});
+          data.addColumn({type: 'string', role: 'style'})
+          data.addRows([
+            ['Work', 8, "8 Hours", '#3366CC'],
+            ['Eat',   4, "4 Hours", '#DC3912'],
+            ['Commute', 2, "2 Hours", '#FF9900'],
+            ['Working Out', 1.5, "1.5 Hours", '#109618'],
+            ['Sleep', 8, "8 Hours", '#990099'],
+            ['Other', 0.5, "0.5 Hours", '#0099C6']
+          ]);
+
+          var options1 = {
+              fontSize: 15,
+              fontName: "Trebuchet MS",
+              // title: 'My Daily Activities',
+              // titleTextStyle: {fontSize: 27},
+              pieSliceText: 'percentage',
+              legend: {
+                position: 'bottom',
+                alignment: 'start',
+                textStyle: {
+                  fontSize: 12
+                }
+              },
+              pieStartAngle:0
+            };
+          var options2 = {
+              fontSize: 13,
+              fontName: "Trebuchet MS",
+              // title: 'My Daily Activities',
+              // titleTextStyle: {fontSize: 27},
+              legend: 'none',
+              hAxis: {
+                title: 'Activities',
+                titleTextStyle:{
+                  fontSize: 15
+                }
+              },
+              vAxis: {
+                title: 'Hours',
+                titleTextStyle:{
+                  fontSize: 15
+                }
+              }
+            };
+
+      var chart1 = new google.visualization.PieChart(document.getElementById('chart_div1'));
+      chart1.draw(data, options1);
+
+      var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
+      chart2.draw(data, options2);
+    }
+
+// Resizing of graphs implementation borrowed from https://codepen.io/flopreynat/pen/BfLkA
+$(window).resize(function(){
+  drawChart();
+});
+    </script>
   </body>
 </html>

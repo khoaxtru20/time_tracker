@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>TRACK IT!</title>
+    <title>TimeTracker</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,13 +28,13 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="gDate()">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">TRACK IT!</a>
+          <a class="navbar-brand" href="#">Time Tracker</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -43,7 +43,7 @@
             <li><a href="./analyze.html">Analyze Time</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!-- <button type="button" class="btn btn-primary navbar-btn track">Track New Activity</button>
+            <!-- <a href="#" type="button" class="btn btn-primary navbar-btn track">Track New Activity</a>
             <button type="button" class="btn btn-default navbar-btn">Stop Tracking</button> -->
           </ul>
         </div><!--/.nav-collapse -->
@@ -51,14 +51,15 @@
     </nav>
 
 
-    <div class='container-fluid timeline' style="visibility:hidden;">
+    <div class='container-fluid timeline'>
       <ul class='htimeline'>
-        <li data-date='Feb. 10, 2017' class='step col-sm-12 orange'>
+        <li data-date='' class='step col-sm-12 blue' id="date">
           <!-- <div>Inserted</div> -->
           <div class='tasks container-fluid'>
-              <div class='task col-sm-3'>Blank</div>
+              <div class='task col-sm-3' id="timeline">Untitled</div>
           </div>
         </li>
+      </ul>
     </div>
 
 
@@ -89,9 +90,6 @@
     </div>
 
 
-    <!-- <div id="test">
-      no data in sessionStorage
-    </div> -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
