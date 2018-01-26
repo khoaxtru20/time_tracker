@@ -1,6 +1,8 @@
 # time_tracker
 Web Interface for Track it!
+
 Team: Space Snakes
+
 Members: Khoa Truong, Sebastian Dobon, Jonathan Shiler, Will Lundgren
 
 TODO:
