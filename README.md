@@ -17,6 +17,6 @@ TODO:
 
 -general reconsideration of features and design; lots of empty space that can be utilized
 
--Build back end
+-build back end
 
 
